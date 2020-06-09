@@ -1,10 +1,11 @@
 // USER VARIABLES SECTION
 
 $accent: orange; // Accent Color
-$fontsize: 16px; // Body Font Size
+$fontsize: 1vw; // Body Font Size
 $textcolor: #333; // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
-$roboto: Roboto, sans-serif; // Roboto Font Family
+$pn: Proxima, sans-serif; // ProximaNova Font Family
+$fg: FranklinGothic, sans-serif; // FranklinGothic Font Family
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px;
@@ -12,8 +13,8 @@ $gutter: $grid-gutter-width;
 
 // IMPORT SECTION
 
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss"; // Bootstrap Reboot collection
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss"; // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
 
@@ -25,14 +26,27 @@ $gutter: $grid-gutter-width;
 		font-style: $fstyle;
 		font-weight: $fweight;
 		// font-display: swap; // Uncomment to initially display system fonts
-		src: local($fname), url($furl) format('woff2');
+		src: local($fname), url($furl) format("woff2");
 	}
 }
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2');
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2');
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+@include font("Proxima", normal, 400, "../fonts/ProximaNova-Regular.woff2");
+@include font("Proxima", normal, bold, "../fonts/ProximaNova-Bold.woff2");
+@include font("Proxima", normal, 800, "../fonts/ProximaNova-Black.woff2");
+@include font("Proxima", normal, 800, "../fonts/ProximaNova-Extrabld.woff2");
+
+@font-face {
+	font-family: "FranklinGothic";
+	src: url("../fonts/FRAMDCN.eot"); /* IE9 Compat Modes */
+	src: url("../fonts/FRAMDCN.eot?#iefix") format("embedded-opentype"),
+		/* IE6-IE8 */ url("../fonts/FRAMDCN.otf") format("opentype"),
+		/* Open Type Font */ url("../fonts/FRAMDCN.svg") format("svg"),
+		/* Legacy iOS */ url("../fonts/FRAMDCN.ttf") format("truetype"),
+		/* Safari, Android, iOS */ url("../fonts/FRAMDCN.woff") format("woff"),
+		/* Modern Browsers */ url("../fonts/FRAMDCN.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
 
 // GENERAL DOCUMENT STYLES
 
@@ -45,18 +59,96 @@ $gutter: $grid-gutter-width;
 	color: #fff;
 }
 
-input, textarea {
+input,
+textarea {
 	outline: none;
-	&:focus:required:invalid { border-color: red }
-	&:required:valid { border-color: green }
+	&:focus:required:invalid {
+		border-color: red;
+	}
+	&:required:valid {
+		border-color: green;
+	}
 }
 
 body {
-	font-family: $roboto;
+	font-family: $pn;
 	font-size: $fontsize;
 	min-width: 320px;
 	position: relative;
-	line-height: 1.65;
+	line-height: 1.5;
 	overflow-x: hidden;
 	color: $textcolor;
+	background: radial-gradient(50% 50% at 50% 50%, #016db6 0%, #004e86 100%);
+}
+
+.wrapper {
+	height: 100%;
+}
+.wrapper-in {
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+	position: relative;
+}
+.main-content {
+	overflow: hidden;
+	flex: 1;
+}
+
+.container {
+	max-width: 98.75em;
+	width: 100%;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0;
+}
+
+p {
+	margin-bottom: 0;
+	font-family: $pn;
+	font-weight: 200;
+}
+a {
+	transition: 0.3s ease-in-out;
+}
+a {
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+
+dl,
+ol,
+ul {
+	margin-bottom: 0;
+}
+
+ul {
+	list-style-type: none;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 0;
+	li {
+		display: block;
+	}
+}
+
+.btn {
+	display: block;
+	color: #fff;
+	border: 1px solid #fff;
+	max-width: 30.5625em;
+	padding: 1em 1.6875em 1.125em;
 }
