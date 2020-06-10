@@ -1,4 +1,44 @@
 @import "config";
 @import "components/header";
 
-// CUSTOM USER STYLES & IMPORTS
+.main-title {
+    h3 {
+        font-family: 'Proxima Nova', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2.75rem;
+        line-height: 120%;
+        letter-spacing: 0.5px;
+        color: #fff;
+        margin-top: 3.4375rem;
+        margin-bottom: 3.0625rem;
+    }
+}
+
+.main-carousel {
+    position: relative;
+    .main-slide {
+        max-width: 46.875rem;
+        margin: 0 auto;
+    }
+    .owl-nav {
+        .owl-prev {
+            position: absolute;
+            left: -1rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #0D5F98 !important;
+            top: 0;
+            color: #fff !important;
+            outline: none;
+            border-radius: 0;
+            border: 1px solid #449FDE !important;
+            span { 
+                font-size: 1.875rem;
+                position: absolute;
+                left: 0.875rem;
+                top: -0.3125rem;
+            }
+        }
+    }
+}
