@@ -1,18 +1,22 @@
 @import "config";
 @import "components/header";
+@import "components/contacts";
+@import "contacts-us";
+@import "vacancies";
+@import "download-info";
 
 .main-title {
-    h3 {
-        font-family: 'Proxima Nova', sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 2.75rem;
-        line-height: 120%;
-        letter-spacing: 0.5px;
-        color: #fff;
-        margin-top: 3.4375rem;
-        margin-bottom: 3.0625rem;
-    }
+	h3 {
+		font-family: "Proxima Nova", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 2.75rem;
+		line-height: 120%;
+		letter-spacing: 0.5px;
+		color: #fff;
+		margin-top: 3.4375rem;
+		margin-bottom: 3.0625rem;
+	}
 }
 
 .main-carousel {
@@ -31,7 +35,73 @@
     .main-slide {
         max-width: 46.875rem;
         margin: 0 auto;
-        background: #000;
+        position: relative;
+        img {
+            position: relative;
+            z-index: 1;
+        }
+        .slide-caption {
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            left: 0;
+            top: 0;
+            min-height: 100%;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(8, 58, 94, 0.7) 0,rgba(8, 58, 94, 0.9) 100%);
+            padding-left: 2.9375rem;
+            padding-top: 3.5rem;
+            padding-bottom: 3.5rem;
+            padding-right: 8.4375rem;
+            .title-with-icon {
+                display: flex;
+                .icon {
+                    img {
+                        width: 3.625rem;
+                        height: 3.625rem;
+                    }
+                }
+                p {
+                    font-family: 'Proxima Nova', sans-serif;
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 1rem;
+                    line-height: 157%;
+                    letter-spacing: 0.0363rem;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    margin-top: -0.3125rem;
+                    margin-left: 1.0625rem;
+                }
+            }
+            .slide-list {
+                margin-top: 1rem;
+                li {
+                    color: #fff;
+                    font-family: 'Proxima Nova', sans-serif;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 0.85rem;
+                    line-height: 135.7%;
+                    letter-spacing: 0.0363rem;
+                    color: rgba(255, 255, 255, 0.8);
+                    margin-bottom: 1.2rem;
+                    position: relative;
+                    padding-left: 1.5rem;
+                    &::before {
+                        content: '';
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        left: 0;
+                        top: 0.25rem;
+                        display: block;
+                        position: absolute;
+                        background: #E37430;
+                        border-radius: 50%;
+                        border: 0.0528rem solid #FFFFFF;
+                    }
+                }
+            }
+        }
     }
     .owl-nav {
         button {
@@ -46,7 +116,7 @@
         .owl-prev {
             position: absolute;
             left: -1rem;
-            top: 42%;
+            top: 43%;
             span { 
                 font-size: 1.875rem;
                 position: absolute;
@@ -57,7 +127,7 @@
         .owl-next {
             position: absolute;
             right: -1rem;
-            top: 42%;
+            top: 43%;
             span { 
                 font-size: 1.875rem;
                 position: absolute;
