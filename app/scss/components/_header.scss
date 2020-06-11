@@ -40,6 +40,13 @@
 		margin-left: 1em;
 		display: flex;
 		align-items: center;
+		.btn-wrap {
+			&:last-child {
+				.btn {
+					padding: 0.35em 0.7875em 0.35em;
+				}
+			}
+		}
 		.btn {
 			padding: 0.35em 1.6875em 0.35em;
 			text-transform: uppercase;
@@ -61,11 +68,19 @@
 				20% 100%,
 				0 100%
 			);
-
+			&:hover {
+				color: #1948b3;
+				border: 0.0625em solid #1948b3;
+				svg {
+					fill: #1948b3;
+				}
+			}
 			svg {
 				width: 1em;
 				height: 1em;
 				margin-left: 0.375em;
+				fill: #fff;
+				transition: 0.3s ease-in-out;
 			}
 			@media (min-width: 1025px) {
 				white-space: nowrap;
@@ -77,10 +92,25 @@
 		a {
 			display: flex;
 			align-items: center;
+			transition: 0.3s ease-in-out;
+			&:hover {
+				.tel-number {
+					color: #1948b3;
+				}
+			}
+			.tel-icon {
+				svg {
+					width: 1.375em;
+					height: 1.375em;
+				}
+			}
 			.tel-number {
 				display: flex;
 				flex-flow: column;
 				white-space: nowrap;
+				margin-left: 0.5em;
+				color: #fff;
+				transition: 0.3s ease-in-out;
 			}
 		}
 	}
@@ -95,4 +125,8 @@
 	}
 	&_wrap {
 	}
+}
+
+.main-footer {
+	height: 7.5em;
 }
