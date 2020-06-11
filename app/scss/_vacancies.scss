@@ -1,0 +1,63 @@
+.vacancies {
+	padding-top: 3.4375em;
+	&-wrap {
+		h1 {
+			margin-bottom: 1.25em;
+		}
+	}
+	&-items-wrap {
+		display: flex;
+		flex-flow: wrap;
+		margin: 0 -0.9375em;
+	}
+}
+
+.vacancies-item {
+	&__wrap {
+		width: 31%;
+		margin: 0 0.9375em;
+		margin-bottom: 3.9375em;
+	}
+	&__name {
+		border: 0.125em solid #2c8dcf;
+		padding: 2.8125em 2.1875em 2.5em 3.125em;
+		margin-bottom: 0.625em;
+		h4 {
+			font-weight: bold;
+			font-size: 1em;
+			line-height: 157.2%;
+			letter-spacing: 0.025em;
+			text-transform: uppercase;
+			margin-bottom: 0.3125em;
+		}
+		p {
+			font-size: 1em;
+			line-height: 135.7%;
+			letter-spacing: 0.03125em;
+			color: rgba(255, 255, 255, 0.5);
+		}
+		&--description {
+			margin: 0.75em 0 0.875em;
+			p {
+				font-size: 1em;
+				line-height: 135.7%;
+				letter-spacing: 0.03125em;
+				color: #ffffff;
+				border-left: 0.125em solid #ff6400;
+				padding-left: 1.1875em;
+			}
+		}
+		&--conditions {
+			p {
+				font-weight: bold;
+				font-size: 1em;
+				line-height: 135.7%;
+				letter-spacing: 0.03125em;
+				color: #ffffff;
+				span {
+					font-weight: normal;
+				}
+			}
+		}
+	}
+}
