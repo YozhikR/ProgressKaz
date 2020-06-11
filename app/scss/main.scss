@@ -17,22 +17,47 @@
 
 .main-carousel {
     position: relative;
+    .center {
+        .main-slide {
+            border: 3px solid #FF6400;
+            -webkit-box-shadow: 0px 0px 33px 3px rgba(255,100,0,1);
+            -moz-box-shadow: 0px 0px 33px 3px rgba(255,100,0,1);
+            box-shadow: 0px 0px 33px 3px rgba(255,100,0,1);
+        }
+    }
+    .item {
+        padding-top: 3rem;
+    }
     .main-slide {
         max-width: 46.875rem;
         margin: 0 auto;
+        background: #000;
     }
     .owl-nav {
-        .owl-prev {
-            position: absolute;
-            left: -1rem;
+        button {
             width: 2.5rem;
             height: 2.5rem;
             background: #0D5F98 !important;
-            top: 0;
             color: #fff !important;
-            outline: none;
-            border-radius: 0;
+            outline: none !important;
+            border-radius: 0 !important;
             border: 1px solid #449FDE !important;
+        }
+        .owl-prev {
+            position: absolute;
+            left: -1rem;
+            top: 42%;
+            span { 
+                font-size: 1.875rem;
+                position: absolute;
+                left: 0.875rem;
+                top: -0.3125rem;
+            }
+        }
+        .owl-next {
+            position: absolute;
+            right: -1rem;
+            top: 42%;
             span { 
                 font-size: 1.875rem;
                 position: absolute;

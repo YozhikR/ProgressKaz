@@ -1,10 +1,15 @@
-$('#main-carousel').owlCarousel({
+const mainCarousel = $('#main-carousel');
+
+$(mainCarousel).owlCarousel({
 	loop: false,
 	margin: 30,
 	dots: false,
 	nav: true,
-	items: 1
+	items: 2,
+	center: true,
+	responsiveClass: true,
 })
+
 $('#inner-carousel').owlCarousel({
 	loop: false,
 	margin: 30,
