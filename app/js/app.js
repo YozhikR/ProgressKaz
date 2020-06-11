@@ -1,8 +1,8 @@
 const mainCarousel = $('#main-carousel');
 
 $(mainCarousel).owlCarousel({
-	loop: false,
-	margin: 30,
+	loop: true,
+	margin: 60,
 	dots: false,
 	nav: true,
 	items: 2,
@@ -40,3 +40,15 @@ $(".download-info-tabs-wrapper .tab").click(function () {
 	$(".download-info-tabs-wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
 	$(".tab_item").hide().eq($(this).index()).fadeIn()
 }).eq(0).addClass("active");
+
+// 2GIS map
+
+var map;
+
+DG.then(function () {
+	map = DG.map('map', {
+		center: [43.237734, 76.932223],
+		zoom: 16
+	});
+	DG.marker([43.237734, 76.932223]).addTo(map);
+});

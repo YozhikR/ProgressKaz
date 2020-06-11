@@ -52,6 +52,7 @@
 				font-size: 1em;
 				line-height: 157.2%;
 				letter-spacing: 0.025em;
+				width: max-content;
 				&:nth-child(2) {
 					margin-bottom: 0.6875em;
 				}
@@ -78,10 +79,10 @@
 .contacts-map {
 	position: relative;
 	width: 50%;
-	height: 100%;
+	height: 38em;
 	border-left: 0.0625em solid #fff;
 	border-right: 0.0625em solid #fff;
-	min-height: 10em;
+	padding: 1.25em;
 	&::before {
 		content: "";
 		position: absolute;
@@ -89,6 +90,8 @@
 		height: 8em;
 		width: 100%;
 		background: #fff;
+		top: 0;
+		left: 0;
 	}
 	&::after {
 		content: "";
@@ -100,4 +103,9 @@
 		bottom: 0;
 		left: 0;
 	}
+}
+
+.map {
+	height: 100%;
+	width: 100%;
 }

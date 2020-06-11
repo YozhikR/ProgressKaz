@@ -5,6 +5,70 @@
 @import "vacancies";
 @import "download-info";
 
+.slider {
+	position: relative;
+	max-height: 50em;
+	&__frames1 {
+		border-left: 0.0625em solid #fff;
+		border-right: 0.0625em solid #fff;
+		width: 22.3125em;
+		height: 28.725em;
+		position: absolute;
+		top: 2.8em;
+		left: 0;
+		z-index: -1;
+		&::before {
+			content: "";
+			position: absolute;
+			clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 1%, 75% 0, 25% 0, 0 1%, 0 0);
+			height: 8em;
+			width: 100%;
+			background: #fff;
+			top: 0;
+			left: 0;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			clip-path: polygon(25% 100%, 75% 100%, 100% 99%, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 99%);
+			height: 8em;
+			width: 100%;
+			background: #fff;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	&__frames2 {
+		border-left: 0.0625em solid #fff;
+		border-right: 0.0625em solid #fff;
+		width: 22.3125em;
+		height: 28.725em;
+		position: absolute;
+		top: 2.8em;
+		right: 0;
+		&::before {
+			content: "";
+			position: absolute;
+			clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 1%, 75% 0, 25% 0, 0 1%, 0 0);
+			height: 8em;
+			width: 100%;
+			background: #fff;
+			top: 0;
+			left: 0;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			clip-path: polygon(25% 100%, 75% 100%, 100% 99%, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 99%);
+			height: 8em;
+			width: 100%;
+			background: #fff;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
 .main-title {
 	h3 {
 		font-family: "Proxima Nova", sans-serif;
@@ -20,120 +84,173 @@
 }
 
 .main-carousel {
-    position: relative;
-    .center {
-        .main-slide {
-            border: 3px solid #FF6400;
-            -webkit-box-shadow: 0px 0px 33px 3px rgba(255,100,0,1);
-            -moz-box-shadow: 0px 0px 33px 3px rgba(255,100,0,1);
-            box-shadow: 0px 0px 33px 3px rgba(255,100,0,1);
-        }
-    }
-    .item {
-        padding-top: 3rem;
-    }
-    .main-slide {
-        max-width: 46.875rem;
-        margin: 0 auto;
-        position: relative;
-        img {
-            position: relative;
-            z-index: 1;
-        }
-        .slide-caption {
-            position: absolute;
-            z-index: 2;
-            width: 100%;
-            left: 0;
-            top: 0;
-            min-height: 100%;
-            background: radial-gradient(50% 50% at 50% 50%, rgba(8, 58, 94, 0.7) 0,rgba(8, 58, 94, 0.9) 100%);
-            padding-left: 2.9375rem;
-            padding-top: 3.5rem;
-            padding-bottom: 3.5rem;
-            padding-right: 8.4375rem;
-            .title-with-icon {
-                display: flex;
-                .icon {
-                    img {
-                        width: 3.625rem;
-                        height: 3.625rem;
-                    }
-                }
-                p {
-                    font-family: 'Proxima Nova', sans-serif;
-                    font-style: normal;
-                    font-weight: 800;
-                    font-size: 1rem;
-                    line-height: 157%;
-                    letter-spacing: 0.0363rem;
-                    text-transform: uppercase;
-                    color: #FFFFFF;
-                    margin-top: -0.3125rem;
-                    margin-left: 1.0625rem;
-                }
-            }
-            .slide-list {
-                margin-top: 1rem;
-                li {
-                    color: #fff;
-                    font-family: 'Proxima Nova', sans-serif;
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 0.85rem;
-                    line-height: 135.7%;
-                    letter-spacing: 0.0363rem;
-                    color: rgba(255, 255, 255, 0.8);
-                    margin-bottom: 1.2rem;
-                    position: relative;
-                    padding-left: 1.5rem;
-                    &::before {
-                        content: '';
-                        width: 0.5rem;
-                        height: 0.5rem;
-                        left: 0;
-                        top: 0.25rem;
-                        display: block;
-                        position: absolute;
-                        background: #E37430;
-                        border-radius: 50%;
-                        border: 0.0528rem solid #FFFFFF;
-                    }
-                }
-            }
-        }
-    }
-    .owl-nav {
-        button {
-            width: 2.5rem;
-            height: 2.5rem;
-            background: #0D5F98 !important;
-            color: #fff !important;
-            outline: none !important;
-            border-radius: 0 !important;
-            border: 1px solid #449FDE !important;
-        }
-        .owl-prev {
-            position: absolute;
-            left: -1rem;
-            top: 43%;
-            span { 
-                font-size: 1.875rem;
-                position: absolute;
-                left: 0.875rem;
-                top: -0.3125rem;
-            }
-        }
-        .owl-next {
-            position: absolute;
-            right: -1rem;
-            top: 43%;
-            span { 
-                font-size: 1.875rem;
-                position: absolute;
-                left: 0.875rem;
-                top: -0.3125rem;
-            }
-        }
-    }
+	position: relative;
+	.center {
+		.main-slide {
+			border: 3px solid #ff6400;
+			-webkit-box-shadow: 0px 0px 33px 3px rgba(255, 100, 0, 1);
+			-moz-box-shadow: 0px 0px 33px 3px rgba(255, 100, 0, 1);
+			box-shadow: 0px 0px 33px 3px rgba(255, 100, 0, 1);
+		}
+		.under-carousel {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	.item {
+		margin-top: 3rem;
+		position: relative;
+	}
+	.main-slide {
+		max-width: 46.875rem;
+		margin: 0 auto;
+		position: relative;
+		img {
+			position: relative;
+			z-index: 1;
+		}
+		.slide-caption {
+			position: absolute;
+			z-index: 2;
+			width: 100%;
+			left: 0;
+			top: 0;
+			min-height: 100%;
+			background: radial-gradient(50% 50% at 50% 50%, rgba(8, 58, 94, 0.7) 0, rgba(8, 58, 94, 0.9) 100%);
+			padding-left: 2.9375rem;
+			padding-top: 3.5rem;
+			padding-bottom: 3.5rem;
+			padding-right: 8.4375rem;
+			.title-with-icon {
+				display: flex;
+				.icon {
+					img {
+						width: 3.625rem;
+						height: 3.625rem;
+					}
+				}
+				p {
+					font-family: "Proxima Nova", sans-serif;
+					font-style: normal;
+					font-weight: 800;
+					font-size: 1rem;
+					line-height: 157%;
+					letter-spacing: 0.0363rem;
+					text-transform: uppercase;
+					color: #ffffff;
+					margin-top: -0.3125rem;
+					margin-left: 1.0625rem;
+				}
+			}
+			.slide-list {
+				margin-top: 1rem;
+				li {
+					color: #fff;
+					font-family: "Proxima Nova", sans-serif;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 0.85rem;
+					line-height: 135.7%;
+					letter-spacing: 0.0363rem;
+					color: rgba(255, 255, 255, 0.8);
+					margin-bottom: 1.2rem;
+					position: relative;
+					padding-left: 1.5rem;
+					&::before {
+						content: "";
+						width: 0.5rem;
+						height: 0.5rem;
+						left: 0;
+						top: 0.25rem;
+						display: block;
+						position: absolute;
+						background: #e37430;
+						border-radius: 50%;
+						border: 0.0528rem solid #ffffff;
+					}
+				}
+			}
+		}
+	}
+	.owl-nav {
+		button {
+			width: 2.5rem;
+			height: 2.5rem;
+			background: #0d5f98 !important;
+			color: #fff !important;
+			outline: none !important;
+			border-radius: 0 !important;
+			border: 1px solid #449fde !important;
+		}
+		.owl-prev {
+			position: absolute;
+			left: -2.2em;
+			top: 7%;
+			span {
+				font-size: 1.875rem;
+				position: absolute;
+				left: 0.875rem;
+				top: -0.3125rem;
+			}
+		}
+		.owl-next {
+			position: absolute;
+			right: -2.2em;
+			top: 7%;
+			span {
+				font-size: 1.875rem;
+				position: absolute;
+				left: 0.875rem;
+				top: -0.3125rem;
+			}
+		}
+	}
+}
+
+.under-carousel {
+	visibility: hidden;
+	opacity: 1;
+	.item {
+		border: 0.0625em solid #fff;
+		padding: 0.275em;
+		&::before {
+			display: none;
+		}
+		&::after {
+			display: none;
+		}
+	}
+	.owl-nav {
+		button {
+			width: 2.5rem;
+			height: 2.5rem;
+			background: #0d5f98 !important;
+			color: #fff !important;
+			outline: none !important;
+			border-radius: 0 !important;
+			border: 1px solid #449fde !important;
+		}
+		.owl-prev {
+			position: absolute;
+			left: -1rem;
+			top: 43%;
+			span {
+				font-size: 1.875rem;
+				position: absolute;
+				left: 0.875rem;
+				top: -0.3125rem;
+			}
+		}
+		.owl-next {
+			position: absolute;
+			right: -1rem;
+			top: 43%;
+			span {
+				font-size: 1.875rem;
+				position: absolute;
+				left: 0.875rem;
+				top: -0.3125rem;
+			}
+		}
+	}
 }
