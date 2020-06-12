@@ -91,10 +91,62 @@
 			-webkit-box-shadow: 0px 0px 33px 3px rgba(255, 100, 0, 1);
 			-moz-box-shadow: 0px 0px 33px 3px rgba(255, 100, 0, 1);
 			box-shadow: 0px 0px 33px 3px rgba(255, 100, 0, 1);
+			.slide-caption {
+				padding-left: 2.9375rem;
+				padding-top: 2.5rem;
+				padding-bottom: 3.5rem;
+				padding-right: 6rem;
+				display: block;
+				.title-with-icon {
+					max-width: none;
+					p {
+						font-size: 1rem;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+					}
+				}
+				.slide-list {
+					margin-top: 1.5rem;
+					display: block;
+					li {
+						color: #fff;
+						font-family: "Proxima Nova", sans-serif;
+						font-style: normal;
+						font-weight: 600;
+						font-size: 0.9rem;
+						line-height: 135.7%;
+						letter-spacing: 0.0363rem;
+						color: rgba(255, 255, 255, 0.8);
+						margin-bottom: 1.25rem;
+						position: relative;
+						padding-left: 1.5rem;
+						&::before {
+							content: "";
+							width: 0.5rem;
+							height: 0.5rem;
+							left: 0;
+							top: 0.25rem;
+							display: block;
+							position: absolute;
+							background: #e37430;
+							border-radius: 50%;
+							border: 0.0528rem solid #ffffff;
+						}
+					}
+				}
+			}
 		}
 		.under-carousel {
 			visibility: visible;
 			opacity: 1;
+		}
+	}
+	.after-center {
+		.main-slide {
+			.slide-caption {
+				display: block;
+			}
 		}
 	}
 	.item {
@@ -117,23 +169,25 @@
 			top: 0;
 			min-height: 100%;
 			background: radial-gradient(50% 50% at 50% 50%, rgba(8, 58, 94, 0.7) 0, rgba(8, 58, 94, 0.9) 100%);
-			padding-left: 2.9375rem;
-			padding-top: 3.5rem;
-			padding-bottom: 3.5rem;
-			padding-right: 8.4375rem;
+			padding-left: 1.25rem;
+			padding-top: 2rem;
+			display: flex;
+			justify-content: flex-end;
 			.title-with-icon {
 				display: flex;
+				max-width: 15rem;
+				padding-right: 1rem;
 				.icon {
 					img {
-						width: 3.625rem;
-						height: 3.625rem;
+						width: 3rem;
+						height: 3rem;
 					}
 				}
 				p {
 					font-family: "Proxima Nova", sans-serif;
 					font-style: normal;
 					font-weight: 800;
-					font-size: 1rem;
+					font-size: 0.75rem;
 					line-height: 157%;
 					letter-spacing: 0.0363rem;
 					text-transform: uppercase;
@@ -143,32 +197,7 @@
 				}
 			}
 			.slide-list {
-				margin-top: 1rem;
-				li {
-					color: #fff;
-					font-family: "Proxima Nova", sans-serif;
-					font-style: normal;
-					font-weight: 600;
-					font-size: 0.85rem;
-					line-height: 135.7%;
-					letter-spacing: 0.0363rem;
-					color: rgba(255, 255, 255, 0.8);
-					margin-bottom: 1.2rem;
-					position: relative;
-					padding-left: 1.5rem;
-					&::before {
-						content: "";
-						width: 0.5rem;
-						height: 0.5rem;
-						left: 0;
-						top: 0.25rem;
-						display: block;
-						position: absolute;
-						background: #e37430;
-						border-radius: 50%;
-						border: 0.0528rem solid #ffffff;
-					}
-				}
+				display: none;
 			}
 		}
 	}
@@ -185,7 +214,7 @@
 		.owl-prev {
 			position: absolute;
 			left: -2.2em;
-			top: 7%;
+			bottom: 91%;
 			span {
 				font-size: 1.875rem;
 				position: absolute;
@@ -196,7 +225,7 @@
 		.owl-next {
 			position: absolute;
 			right: -2.2em;
-			top: 7%;
+			bottom: 91%;
 			span {
 				font-size: 1.875rem;
 				position: absolute;
@@ -212,6 +241,7 @@
 	opacity: 1;
 	.item {
 		border: 0.0625em solid #fff;
+		display: block;
 		padding: 0.275em;
 		&::before {
 			display: none;
@@ -233,7 +263,7 @@
 		.owl-prev {
 			position: absolute;
 			left: -1rem;
-			top: 43%;
+			top: 50%;
 			span {
 				font-size: 1.875rem;
 				position: absolute;
@@ -244,7 +274,7 @@
 		.owl-next {
 			position: absolute;
 			right: -1rem;
-			top: 43%;
+			top: 50%;
 			span {
 				font-size: 1.875rem;
 				position: absolute;
