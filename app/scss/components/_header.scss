@@ -33,6 +33,11 @@
 						}
 					}
 				}
+				li:hover .in-menu {
+					visibility: visible !important;
+					opacity: 1 !important;
+					z-index: 150 !important;
+				}
 			}
 		}
 	}
@@ -82,7 +87,7 @@
 				fill: #fff;
 				transition: 0.3s ease-in-out;
 			}
-			@media (min-width: 1025px) {
+			@media (min-width: 1025em) {
 				white-space: nowrap;
 			}
 		}
@@ -127,6 +132,81 @@
 	}
 }
 
-.main-footer {
-	height: 7.5em;
+.in-menu {
+	.container {
+		width: 80% !important;
+		min-width: 80% !important;
+		min-width: 80% !important;
+		background: #c8d4e2;
+		box-shadow: 0em 4em 4em rgba(0, 0, 0, 0.25);
+		padding-bottom: 3em;
+		padding-top: 4em;
+	}
+	transition: 0.5s;
+	visibility: hidden;
+	opacity: 0;
+	display: inline-block;
+	position: fixed;
+	width: 100%;
+	right: 0;
+	left: 0;
+	top: 6.6em;
+	height: auto;
+	z-index: 0;
+	.col-lg-4 {
+		.pic {
+			min-width: 13em;
+			img {
+				max-width: 12em;
+			}
+		}
+		.one-ul {
+			display: flex;
+			.the-ul {
+				margin-left: 2em;
+			}
+		}
+		ul {
+			padding-left: 0;
+			margin-top: 0;
+			color: #1948b2;
+			.title-ul {
+				font-weight: 600;
+				font-size: 1.6em;
+				line-height: 143.7%;
+				letter-spacing: 0.5em;
+				color: #ff6400;
+				width: 100%;
+				border-bottom: 0.125em solid #ff6400;
+			}
+			a {
+				color: #1948b2;
+				font-size: 1.5em;
+				font-weight: 300;
+				text-transform: none;
+				font-family: Franklin Gothic Book;
+				text-align: left;
+				margin-left: 0;
+				border: none !important;
+				&::after {
+					display: none !important;
+				}
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.bottom-addition {
+			font-weight: normal;
+			font-size: 1.5em;
+			line-height: 143.7%;
+			letter-spacing: 0.5em;
+			color: #1948b2;
+			padding-left: 0.5em;
+			span {
+				display: block;
+				margin-bottom: 0.5em;
+			}
+		}
+	}
 }
