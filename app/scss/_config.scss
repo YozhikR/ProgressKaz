@@ -83,6 +83,9 @@ body {
 	overflow-x: hidden;
 	color: $textcolor;
 	background: radial-gradient(50% 50% at 50% 50%, #016db6 0%, #004e86 100%);
+	@media (max-width: 1025px) {
+		font-size: 16px;
+	}
 }
 
 .wrapper {
@@ -122,6 +125,12 @@ h1 {
 	line-height: 120%;
 	letter-spacing: 0.03125em;
 	color: #ffffff;
+	@media (max-width: 1025px) {
+		text-align: center;
+	}
+	@media (max-width: 568px) {
+		font-size: 1.75em !important;
+	}
 }
 
 p {

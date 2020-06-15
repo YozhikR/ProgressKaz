@@ -40,6 +40,9 @@
 				}
 			}
 		}
+		@media (max-width: 1025px) {
+			display: none;
+		}
 	}
 	&__links {
 		margin-left: 1em;
@@ -91,6 +94,9 @@
 				white-space: nowrap;
 			}
 		}
+		@media (max-width: 1025px) {
+			display: none;
+		}
 	}
 	&__contacts {
 		margin: 0 1.125em;
@@ -140,7 +146,7 @@
 		background: #c8d4e2;
 		box-shadow: 0em 4em 4em rgba(0, 0, 0, 0.25);
 		padding-bottom: 3em;
-		padding-top: 4em;
+		padding-top: 2em;
 	}
 	transition: 0.5s;
 	visibility: hidden;

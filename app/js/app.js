@@ -1,49 +1,3 @@
-
-//const mainCarousel = $('#main-carousel');
-//$(mainCarousel).owlCarousel({
-//	loop: true,
-//	rewind: false,
-//	margin: 60,
-//	dots: false,
-//	nav: true,
-//	items: 2,
-//	center: true,
-//	responsiveClass: true,
-//	mouseDrag: false
-//})
-
-//$('.owl-item.center').next().addClass('after-center')
-
-//$('.owl-next').click(function() {
-//	$('.owl-item.center').removeClass('after-center')
-//	$('.owl-item.center').prev().removeClass('after-center')
-//	$('.owl-item.center').next().addClass('after-center')
-//})
-
-//$('.owl-prev').click(function() {
-//	$('.owl-item.center').removeClass('after-center')
-//	$('.owl-item.center').next().addClass('after-center')
-//})
-
-//var cnt = 1;
-//$(".main-carousel .item .under-carousel").each(function () {
-//    $(this).attr('id', function (index) {
-//        return "inner-carousel" + cnt;
-//	});
-
-//	$(`#inner-carousel${cnt}`).owlCarousel({
-//		loop: false,
-//		rewind: false,
-//		margin: 30,
-//		dots: false,
-//		nav: true,
-//		items: 3
-//	})
-
-
-//    cnt++;
-//});
-
 $(document).ready(function () {
 
 	$('[data-fancybox="gallery"]').fancybox({
@@ -62,7 +16,18 @@ $(document).ready(function () {
 		centerMode: true,
 		variableWidth: true,
 		prevArrow: '<button type="button" class="slick-prev"></button>',
-		nextArrow: '<button type="button" class="slick-next"></button>'
+		nextArrow: '<button type="button" class="slick-next"></button>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					dots: false,
+					variableWidth: false,
+					slidesToShow: 1,
+					centerMode: false
+				}
+			}
+		]
 	});
 
 	$('.under-slide1').slick({
@@ -71,7 +36,25 @@ $(document).ready(function () {
 		variableWidth: true,
 		infinite: false,
 		prevArrow: '<button type="button" class="under-slick-prev"></button>',
-		nextArrow: '<button type="button" class="under-slick-next"></button>'
+		nextArrow: '<button type="button" class="under-slick-next"></button>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					dots: false,
+					variableWidth: false,
+					slidesToShow: 2,
+					centerMode: false
+				}
+			},
+			{
+				breakpoint: 568,
+				settings: {
+					slidesToShow: 1,
+					centerMode: true
+				}
+			}
+		]
 	});
 
 	$('.under-slide2').slick({
@@ -80,7 +63,24 @@ $(document).ready(function () {
 		variableWidth: true,
 		infinite: false,
 		prevArrow: '<button type="button" class="under-slick-prev"></button>',
-		nextArrow: '<button type="button" class="under-slick-next"></button>'
+		nextArrow: '<button type="button" class="under-slick-next"></button>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					dots: false,
+					variableWidth: false,
+					slidesToShow: 2,
+					centerMode: false
+				}
+			},
+			{
+				breakpoint: 568,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		]
 	});
 
 	$('.under-slide3').slick({
@@ -89,7 +89,24 @@ $(document).ready(function () {
 		variableWidth: true,
 		infinite: false,
 		prevArrow: '<button type="button" class="under-slick-prev"></button>',
-		nextArrow: '<button type="button" class="under-slick-next"></button>'
+		nextArrow: '<button type="button" class="under-slick-next"></button>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					dots: false,
+					variableWidth: false,
+					slidesToShow: 2,
+					centerMode: false
+				}
+			},
+			{
+				breakpoint: 568,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		]
 	});
 
 	$('.under-slide4').slick({
@@ -98,7 +115,24 @@ $(document).ready(function () {
 		variableWidth: true,
 		infinite: false,
 		prevArrow: '<button type="button" class="under-slick-prev"></button>',
-		nextArrow: '<button type="button" class="under-slick-next"></button>'
+		nextArrow: '<button type="button" class="under-slick-next"></button>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					dots: false,
+					variableWidth: false,
+					slidesToShow: 2,
+					centerMode: false
+				}
+			},
+			{
+				breakpoint: 568,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		]
 	});
 
 	$('.catalog-btn').hover(function () {
@@ -118,6 +152,19 @@ $(document).ready(function () {
 		$(".download-info-tabs-wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
 		$(".tab_item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("active");
+
+	$('.slick-center').next().addClass('after-center')
+
+	$('.slick-next').click(function () {
+		$('.slick-center').removeClass('after-center')
+		$('.slick-center').prev().removeClass('after-center')
+		$('.slick-center').next().addClass('after-center')
+	})
+
+	$('.slick-prev').click(function () {
+		$('.slick-center').removeClass('after-center')
+		$('.slick-center').next().addClass('after-center')
+	})
 
 	// 2GIS map
 
