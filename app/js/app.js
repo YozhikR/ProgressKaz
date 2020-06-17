@@ -1,10 +1,27 @@
 $(document).ready(function () {
 
-	$('[data-fancybox="gallery"]').fancybox({
-		//thumbs: {
-		//	autoStart: true
-		//}
-	});
+	//$('[data-fancybox="gallery"]').fancybox({
+	//	//thumbs: {
+	//	//	autoStart: true
+	//	//}
+	//});
+	$(".under-slide1 .under-slide__item-img a").fancybox({
+		animationEffect: 'fade'
+	}).attr('data-fancybox', 'gallery1');
+
+	$(".under-slide2 .under-slide__item-img a").fancybox({
+		animationEffect: 'fade'
+	}).attr('data-fancybox', 'gallery2');
+
+	$(".under-slide3 .under-slide__item-img a").fancybox({
+		animationEffect: 'fade'
+	}).attr('data-fancybox', 'gallery3');
+
+	$(".under-slide4 .under-slide__item-img a").fancybox({
+		animationEffect: 'fade'
+	}).attr('data-fancybox', 'gallery4');
+
+	//$(".under-slide__item-img a").fancybox();
 
 
 	$('.main-slider').slick({
@@ -34,7 +51,7 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		arrows: true,
 		variableWidth: true,
-		infinite: false,
+		infinite: true,
 		prevArrow: '<button type="button" class="under-slick-prev"></button>',
 		nextArrow: '<button type="button" class="under-slick-next"></button>',
 		responsive: [
@@ -61,7 +78,7 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		arrows: true,
 		variableWidth: true,
-		infinite: false,
+		infinite: true,
 		prevArrow: '<button type="button" class="under-slick-prev"></button>',
 		nextArrow: '<button type="button" class="under-slick-next"></button>',
 		responsive: [
@@ -87,7 +104,7 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		arrows: true,
 		variableWidth: true,
-		infinite: false,
+		infinite: true,
 		prevArrow: '<button type="button" class="under-slick-prev"></button>',
 		nextArrow: '<button type="button" class="under-slick-next"></button>',
 		responsive: [
@@ -113,7 +130,7 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		arrows: true,
 		variableWidth: true,
-		infinite: false,
+		infinite: true,
 		prevArrow: '<button type="button" class="under-slick-prev"></button>',
 		nextArrow: '<button type="button" class="under-slick-next"></button>',
 		responsive: [

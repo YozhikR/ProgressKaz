@@ -69,7 +69,7 @@
 	width: 21.7em;
 	height: 28.725em;
 	position: absolute;
-	top: 8.5em;
+	top: 8.3em;
 	left: 0;
 	z-index: -1;
 	&::before {
@@ -107,7 +107,7 @@
 	width: 21.7em;
 	height: 28.725em;
 	position: absolute;
-	top: 8.5em;
+	top: 8.3em;
 	right: 0;
 	&::before {
 		content: "";
@@ -160,6 +160,9 @@
 		@media (max-width: 768px) {
 			padding-top: 0;
 		}
+	}
+	.slick-list {
+		margin-bottom: 1em;
 	}
 	&__item {
 		margin: 0 2em;
@@ -373,13 +376,13 @@
 
 .under-slide {
 	margin-top: 1.5em;
-	padding: 0 2.9em;
 	position: relative;
 	opacity: 0;
 	transition: 0.3s ease;
 	&-wrap {
 		position: relative;
 		z-index: 1;
+		padding: 1em 2.9em;
 	}
 	.slick-list {
 		position: relative;
@@ -437,14 +440,14 @@
 		transform: translateY(-50%);
 		outline: none;
 		&.under-slick-prev {
-			left: 1.7em;
+			left: -1.1em;
 			background-image: url(../images/dest/arrow-left.svg);
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: 23%;
 		}
 		&.under-slick-next {
-			right: 2.3em;
+			right: -0.5em;
 			background-image: url(../images/dest/arrow-right.svg);
 			background-repeat: no-repeat;
 			background-position: center;
@@ -490,7 +493,16 @@
 	//}
 }
 
+.slick-arrow {
+	transition: 0.3s ease-in-out;
+	&:hover {
+		background-color: lighten(#0d5f98, 15%);
+		border: 0.0625em solid darken(#0d5f98, 5%);
+	}
+}
+
 .top-slide {
+	height: 100%;
 	@media (max-width: 568px) {
 		height: 17em;
 	}
@@ -540,7 +552,6 @@
 		max-width: 17em;
 		padding-right: 1em;
 		display: flex;
-		align-items: center;
 		position: absolute;
 		right: 0.5em;
 		.icon {
