@@ -43,121 +43,37 @@ $(document).ready(function () {
 		]
 	});
 
-	//var cnt = 1;
-	//$(".main-slider .item .under-slide").each(function () {
-	//	$(this).attr('id', function (index) {
-	//		return "under-slide" + cnt;
-	//	});
-
-
-
-
-	//	cnt++;
-	//});
-
-	$(`.under-slide1`).slick({
-		slidesToShow: 3,
-		arrows: true,
-		variableWidth: true,
-		infinite: true,
-		prevArrow: '<button type="button" class="under-slick-prev"></button>',
-		nextArrow: '<button type="button" class="under-slick-next"></button>',
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					dots: false,
-					variableWidth: false,
-					slidesToShow: 2,
-					centerMode: false
-				}
-			},
-			{
-				breakpoint: 568,
-				settings: {
-					slidesToShow: 1,
-					centerMode: true
-				}
-			}
-		]
-	});
-
-	$('.under-slide2').slick({
-		slidesToShow: 3,
-		arrows: true,
-		variableWidth: true,
-		infinite: true,
-		prevArrow: '<button type="button" class="under-slick-prev"></button>',
-		nextArrow: '<button type="button" class="under-slick-next"></button>',
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					dots: false,
-					variableWidth: false,
-					slidesToShow: 2,
-					centerMode: false
-				}
-			},
-			{
-				breakpoint: 568,
-				settings: {
-					slidesToShow: 1,
-				}
-			}
-		]
-	});
-
-	$('.under-slide3').slick({
-		slidesToShow: 3,
-		arrows: true,
-		variableWidth: true,
-		infinite: true,
-		prevArrow: '<button type="button" class="under-slick-prev"></button>',
-		nextArrow: '<button type="button" class="under-slick-next"></button>',
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					dots: false,
-					variableWidth: false,
-					slidesToShow: 2,
-					centerMode: false
-				}
-			},
-			{
-				breakpoint: 568,
-				settings: {
-					slidesToShow: 1,
-				}
-			}
-		]
-	});
-
-	$('.under-slide4').slick({
-		slidesToShow: 3,
-		arrows: true,
-		variableWidth: true,
-		infinite: true,
-		prevArrow: '<button type="button" class="under-slick-prev"></button>',
-		nextArrow: '<button type="button" class="under-slick-next"></button>',
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					dots: false,
-					variableWidth: false,
-					slidesToShow: 2,
-					centerMode: false
-				}
-			},
-			{
-				breakpoint: 568,
-				settings: {
-					slidesToShow: 1,
-				}
-			}
-		]
+	var cnt = 1;
+	$(".main-slider .main-slider__item .main-slider__item-wrap .under-slide-wrap").each(function () {
+		$(this).attr('class', function (index) {
+			$(`.under-slide${cnt}`).slick({
+				slidesToShow: 3,
+				arrows: true,
+				variableWidth: true,
+				infinite: true,
+				prevArrow: '<button type="button" class="under-slick-prev"></button>',
+				nextArrow: '<button type="button" class="under-slick-next"></button>',
+				responsive: [
+					{
+						breakpoint: 1024,
+						settings: {
+							dots: false,
+							variableWidth: false,
+							slidesToShow: 2,
+							centerMode: false
+						}
+					},
+					{
+						breakpoint: 568,
+						settings: {
+							slidesToShow: 1,
+							centerMode: true
+						}
+					}
+				]
+			});
+		});
+		cnt++;
 	});
 
 	$('.catalog-btn').hover(function () {
