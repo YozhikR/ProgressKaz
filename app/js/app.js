@@ -1,21 +1,5 @@
 $(document).ready(function () {
 
-	$(".under-slide1 .under-slide__item-img a").fancybox({
-		animationEffect: 'fade'
-	}).attr('data-fancybox', 'gallery1');
-
-	$(".under-slide2 .under-slide__item-img a").fancybox({
-		animationEffect: 'fade'
-	}).attr('data-fancybox', 'gallery2');
-
-	$(".under-slide3 .under-slide__item-img a").fancybox({
-		animationEffect: 'fade'
-	}).attr('data-fancybox', 'gallery3');
-
-	$(".under-slide4 .under-slide__item-img a").fancybox({
-		animationEffect: 'fade'
-	}).attr('data-fancybox', 'gallery4');
-
 	//$(".under-slide__item-img a").fancybox();
 
 
@@ -44,9 +28,11 @@ $(document).ready(function () {
 	});
 
 	var cnt = 1;
-	$(".main-slider .main-slider__item .main-slider__item-wrap .under-slide-wrap").each(function () {
+	var cntGallery = 1;
+	$(".main-slider .main-slider__item .main-slider__item-wrap .under-slide-wrap .under-slide").each(function () {
 		$(this).attr('class', function (index) {
-			$(`.under-slide${cnt}`).slick({
+			$(this).addClass(`slide-cnt${cnt}`);
+			$(`.slide-cnt${cnt}`).slick({
 				slidesToShow: 3,
 				arrows: true,
 				variableWidth: true,
@@ -73,13 +59,29 @@ $(document).ready(function () {
 				]
 			});
 		});
+		$(`.slide-cnt${cnt} .under-slide__item-img a`).fancybox({
+			animationEffect: 'fade'
+		}).attr('data-fancybox', `gallery1${cnt}`);
 		cnt++;
 	});
 
-	$('.catalog-btn').hover(function () {
-		$(this).toggleClass('active');
-		$('.catalog-dropdown').toggleClass('active');
-	})
+
+	//$(".under-slide2 .under-slide__item-img a").fancybox({
+	//	animationEffect: 'fade'
+	//}).attr('data-fancybox', 'gallery2');
+
+	//$(".under-slide3 .under-slide__item-img a").fancybox({
+	//	animationEffect: 'fade'
+	//}).attr('data-fancybox', 'gallery3');
+
+	//$(".under-slide4 .under-slide__item-img a").fancybox({
+	//	animationEffect: 'fade'
+	//}).attr('data-fancybox', 'gallery4');
+
+	//$('.catalog-btn').hover(function () {
+	//	$(this).toggleClass('active');
+	//	$('.catalog-dropdown').toggleClass('active');
+	//})
 
 	$('.catalog-dropdown').hover(function () {
 		$(this).toggleClass('active');
