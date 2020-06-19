@@ -1,10 +1,5 @@
 $(document).ready(function () {
 
-	//$('[data-fancybox="gallery"]').fancybox({
-	//	//thumbs: {
-	//	//	autoStart: true
-	//	//}
-	//});
 	$(".under-slide1 .under-slide__item-img a").fancybox({
 		animationEffect: 'fade'
 	}).attr('data-fancybox', 'gallery1');
@@ -24,7 +19,8 @@ $(document).ready(function () {
 	//$(".under-slide__item-img a").fancybox();
 
 
-	$('.main-slider').slick({
+	const mainSlider = $('.main-slider');
+	$(mainSlider).slick({
 		arrows: true,
 		dots: true,
 		slidesToShow: 1,
@@ -47,7 +43,19 @@ $(document).ready(function () {
 		]
 	});
 
-	$('.under-slide1').slick({
+	//var cnt = 1;
+	//$(".main-slider .item .under-slide").each(function () {
+	//	$(this).attr('id', function (index) {
+	//		return "under-slide" + cnt;
+	//	});
+
+
+
+
+	//	cnt++;
+	//});
+
+	$(`.under-slide1`).slick({
 		slidesToShow: 3,
 		arrows: true,
 		variableWidth: true,
