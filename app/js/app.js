@@ -7,6 +7,7 @@ $(document).ready(function () {
 	$(mainSlider).slick({
 		arrows: true,
 		dots: true,
+		loop: true,
 		slidesToShow: 1,
 		speed: 1000,
 		easing: 'ease',
@@ -35,18 +36,20 @@ $(document).ready(function () {
 			$(`.slide-cnt${cnt}`).slick({
 				slidesToShow: 3,
 				arrows: true,
+				centerMode: true,
 				variableWidth: true,
 				infinite: true,
+				loop: true,
 				prevArrow: '<button type="button" class="under-slick-prev"></button>',
 				nextArrow: '<button type="button" class="under-slick-next"></button>',
 				responsive: [
 					{
-						breakpoint: 1024,
+						breakpoint: 1025,
 						settings: {
 							dots: false,
-							variableWidth: false,
-							slidesToShow: 2,
-							centerMode: false
+							variableWidth: true,
+							slidesToShow: 3,
+							centerMode: true
 						}
 					},
 					{
